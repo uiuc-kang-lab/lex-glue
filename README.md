@@ -174,7 +174,7 @@ For example to load the SCOTUS [Spaeth et al. (2020)](http://scdb.wustl.edu) dat
 ```python
 
 from datasets import load_dataset 
-dataset = load_dataset("lex_glue", "scotus")
+dataset = load_dataset("coastalcph/lex_glue", "scotus")
 
 ```
 
