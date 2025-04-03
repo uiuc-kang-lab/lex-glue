@@ -136,13 +136,13 @@ class ModelArguments:
     )
 
 
-def main():
+def main(args=None):
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
 
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
-    model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+    model_args, data_args, training_args = parser.parse_args_into_dataclasses(args)
 
     # Setup distant debugging if needed
     if data_args.server_ip and data_args.server_port:
